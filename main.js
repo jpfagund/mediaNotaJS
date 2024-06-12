@@ -6,7 +6,12 @@ function calcular(){
     let notaTres = Number(document.getElementById("notaTres").value)
     let notaQuatro= Number(document.getElementById("notaQuatro").value)
     let mediaNota = (notaUm + notaDois + notaTres + notaQuatro) / 4
-
+    let situacao;
+    if (mediaNota >= 7){
+        situacao = "Aprovado"
+    }else{
+        situacao = "Reprovado"
+    }
     console.log(mediaNota)
-    resultado.innerHTML = "Média: " + mediaNota.toFixed(2)
+    resultado.innerHTML = "Média: " + mediaNota.toFixed(2) + "; O aluno está " + situacao
 }
